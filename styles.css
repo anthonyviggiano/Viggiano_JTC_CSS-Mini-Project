@@ -1,0 +1,225 @@
+:root {
+	--bg: #f7f8fa;
+	--page-bg: #ffffff;
+	--text: #0b0b0b;
+	--muted: #4b5563;
+	--accent: #fd0b0b;
+	--accent-strong: #a60404;
+	--border: #e6e9ee;
+	--radius: 8px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+/* Navbar container */
+.navbar {
+	display: flex;                /* Establishes Flexbox layout */
+	align-items: center;          /* Vertically center items */
+	justify-content: space-between; /* Put first and last items at ends */
+	gap: 1rem;                    /* Horizontal spacing between direct children */
+	padding: 0.6rem 1rem;
+	background: var(--accent-strong);
+	color: #fff;
+}
+
+.brand {
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+/* Center links grow to take available space */
+.nav-links {
+	display: flex;                /* Make the list a flex container */
+	gap: 1rem;                    /* Space between links */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex: 1;                      /* Allow links area to grow/shrink */
+	justify-content: center;      /* Center links horizontally in that space */
+}
+
+.nav-links a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0.4rem 0.6rem;
+	border-radius: 6px;
+}
+.nav-links a:hover { 
+	background: rgba(255,255,255,0.08);
+	color: var(--text); 
+}
+
+.nav-right {
+	display: flex;                /* Flex layout for right-side actions */
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.btn {
+	display: inline-block;
+	background: #fff;
+	color: var(--accent-strong);
+	padding: 0.4rem 0.8rem;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+
+body {
+	margin: auto;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background: var(--bg);
+	color: var(--text);
+	font-size: 1rem; /* base font-size (16px) — use rems throughout */
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+img.header {
+	max-width: 80%;
+	height: auto;
+	border-radius: 500px;
+}
+
+img {
+	max-width: 80%;
+	height: auto;
+	border-radius: 10px;	
+	display: block;
+	margin: 12px auto;
+}
+
+main {
+	max-width: 1000px;
+	margin: 36px auto;
+	padding: 24px;
+	text-align: left;
+}
+
+section {
+	background: var(--page-bg);
+	border: 1px solid var(--border);
+	padding: 20px;
+	border-radius: var(--radius);
+	margin-bottom: 22px;
+}
+
+.container {
+	padding: 8px 4px;
+}
+
+h2 {
+	color: var(--accent-strong);
+	margin-top: 0;
+	font-size: 1.375rem; /* 22px */
+}
+
+h3 { 
+	font-size: 1.125rem; /* 18px */
+	margin: 6px 0;
+}
+
+h4 { 
+	font-size: 1.125rem; /* 18px */
+	margin: 10px 0 6px;
+	text-decoration: underline;
+}
+
+.section-title {
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 12px;
+	font-size: 1rem; /* 16px */
+}
+
+p, li {
+	color: var(--text);
+	}
+
+ul, ol {
+	margin: 0 0 15px 1.25rem;
+}
+
+strong { font-weight: 700; }
+
+a {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+	color: var(--accent-strong);
+}
+
+:focus {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 3px solid color-mix(in srgb, var(--accent-strong) 80%, black 20%);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 12px;
+}
+
+caption {
+	caption-side: top;
+	font-weight: 700;
+	margin-bottom: 6px;
+}
+
+th, td {
+	text-align: left;
+	padding: 10px 12px;
+	border: 1px solid var(--border);
+}
+
+th {
+	background: var(--accent-strong);
+	color: #ffffff;
+	font-weight: 700;
+}
+
+tr:nth-child(even) td {
+	background: #fbfdff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+	body { font-size: 16px; }
+	header { flex-direction: column; align-items: center; }
+	img[height] { height: auto; max-width: 240px; }
+	.navbar { flex-wrap: wrap; gap: 0.5rem; }
+	.nav-links { order: 3; width: 100%; justify-content: space-around; }
+	.nav-right { order: 2; }
+	.brand { order: 1; }
+}
+
+
+
